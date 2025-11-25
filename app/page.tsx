@@ -16,7 +16,7 @@ export default function Home() {
       {/* HERO */}
       <Box textAlign="center" mb={8}>
         <Typography variant="h3" fontWeight="bold" gutterBottom>
-          Full Stack Developer
+          Full Stack Developer!
         </Typography>
         <Typography variant="h5" fontWeight="bold" gutterBottom>
           (React / Next.js / Node / wordpress)
