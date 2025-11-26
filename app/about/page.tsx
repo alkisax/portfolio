@@ -20,7 +20,7 @@ export default function AboutPage() {
         </Typography>
 
         <Typography sx={{ color: "#ccc", maxWidth: 700, mx: "auto" }}>
-          Είμαι ο Πελοπίδας, full-stack developer με εξειδίκευση στο MERN,
+          Είμαι ο Πελοπίδας Κοπακάκης, full-stack developer με εξειδίκευση στο MERN,
           Next.js, React Native και WordPress. Φτιάχνω επαγγελματικά e-shops,
           web apps, dashboards, AI εργαλεία και mobile εφαρμογές.
         </Typography>
@@ -33,7 +33,7 @@ export default function AboutPage() {
         </Typography>
 
         <Typography sx={{ color: "#ccc", mb: 3 }}>
-          Προέρχομαι από ακαδημαϊκό υπόβαθρο (3 πτυχία + MSc) και ολοκλήρωσα
+          Προέρχομαι από ακαδημαϊκό υπόβαθρο και ολοκλήρωσα
           επιτυχώς το Coding Factory της ΑΣΟΕΕ με βαθμό 100/100. Τα τελευταία χρόνια
           έχω επικεντρωθεί στην ανάπτυξη πλήρων συστημάτων: backend, frontend,
           mobile και AI.
@@ -53,7 +53,7 @@ export default function AboutPage() {
         </Typography>
 
         <Typography sx={{ color: "#ccc", mb: 3 }}>
-          Συνεργάζομαι με μικρές επιχειρήσεις που χρειάζονται:
+          Συνεργάζομαι με επιχειρήσεις που χρειάζονται:
         </Typography>
 
         <Grid container spacing={4}>

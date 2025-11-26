@@ -21,9 +21,10 @@ export default function ProjectsPage() {
         </Typography>
 
         <Typography sx={{ color: "#ccc", maxWidth: 700, mx: "auto" }}>
-          Χτίζω full-stack εφαρμογές με React, Next.js, Node.js, MongoDB,
-          React Native, MUI, WordPress και RAG AI. Παρακάτω παρουσιάζονται
-          μερικά από τα πιο ολοκληρωμένα έργα.
+          Χτίζω full-stack εφαρμογές με React, Next.js, Node.js, MongoDB, React
+          Native, MUI, αλλά και cms WordPress για φθηνότερες και ταχύτερες
+          λύσεις και εφάρμογές RAG AI. Παρακάτω παρουσιάζονται μερικά από τα
+          έργα.
         </Typography>
       </Box>
 
@@ -41,16 +42,19 @@ export default function ProjectsPage() {
 
               <Typography sx={{ mb: 2 }}>
                 Πλήρως custom e-shop για χειροποίητα κοσμήματα. Wishlist,
-                recommendations, rich-text posts, Stripe / Google Pay,
-                Appwrite uploads, SEO, tests και παραγωγικό deployment
-                σε Hetzner VPS.
+                recommendations, rich-text posts, Stripe / Google Pay, Appwrite
+                uploads, SEO, Semantic Search tests και παραγωγικό deployment σε
+                Hetzner.
               </Typography>
 
               <Link
                 href="/services/eshopExample"
                 style={{ textDecoration: "none" }}
               >
-                <Button variant="contained" sx={{ mt: 1 }}>
+                <Button
+                  variant="contained"
+                  sx={{ textTransform: "none", mt: 1 }}
+                >
                   Δείτε Αναλυτικά
                 </Button>
               </Link>
@@ -61,10 +65,10 @@ export default function ProjectsPage() {
         {/* TEXT */}
         <Grid size={{ xs: 12, sm: 6 }}>
           <Typography sx={{ color: "#ccc" }}>
-            Το μεγαλύτερο project: πλήρες e-commerce σύστημα με custom UI/UX,
-            backend σε Node.js / Express, MongoDB, AI δυνατότητες και
-            CMS-style διαχείριση. Δημιουργήθηκε για πραγματικό πελάτη
-            και λειτουργεί σε production περιβάλλον.
+            Πλήρες e-commerce σύστημα με custom UI/UX, backend σε Node.js /
+            Express, MongoDB, AI δυνατότητες και CMS-style διαχείριση.
+            Δημιουργήθηκε για πραγματικό πελάτη και λειτουργεί σε production
+            περιβάλλον.
           </Typography>
         </Grid>
       </Grid>
@@ -76,10 +80,10 @@ export default function ProjectsPage() {
         {/* TEXT */}
         <Grid size={{ xs: 12, sm: 6 }}>
           <Typography sx={{ color: "#ccc" }}>
-            Custom web εφαρμογή για διαχείριση κοινοχρήστων με δυνατότητα
-            Excel import, αυτόματη δημιουργία λογαριασμών, emails, διαχείριση
+            Custom web εφαρμογή για διαχείριση κοινοχρήστων με δυνατότητα Excel
+            import, αυτόματη δημιουργία λογαριασμών, emails, διαχείριση
             πολλαπλών κτηρίων, αποδείξεις πληρωμής με εικόνα, backend
-            automations και πλήρη native mobile έκδοση.
+            automations και πλήρη native mobile έκδοση. Δημιουργήθηκε για πραγματικό πελάτη και είναι σε λειτουργία
           </Typography>
         </Grid>
 
@@ -92,7 +96,7 @@ export default function ProjectsPage() {
               </Typography>
 
               <Typography sx={{ mb: 2 }}>
-                Multi-tenant web app για πολυκατοικίες. Excel → αυτόματοι
+                Multi-tenant web app για πολυκατοικίες. Από Excel → αυτόματοι
                 λογαριασμοί, email notifications, uploads, approval workflow,
                 dashboard & React Native mobile app.
               </Typography>
@@ -103,7 +107,11 @@ export default function ProjectsPage() {
               >
                 <Button
                   variant="contained"
-                  sx={{ mt: 1, backgroundColor: "#ef6c00" }}
+                  sx={{
+                    mt: 1,
+                    textTransform: "none",
+                    backgroundColor: "#ef6c00",
+                  }}
                 >
                   Δείτε Αναλυτικά
                 </Button>
@@ -127,9 +135,9 @@ export default function ProjectsPage() {
 
               <Typography sx={{ mb: 2 }}>
                 RAG εφαρμογή βασισμένη στο βιβλίο του Thomas Kuhn. Embeddings,
-                semantic search, Mongo vector store, μνήμη και αυτόματη
-                περίληψη απαντήσεων. Η v2 προσθέτει hybrid BM25 + vector
-                search και βελτιωμένο memory layer.
+                semantic search, Mongo vector store, μνήμη και αυτόματη περίληψη
+                απαντήσεων. Η v2 προσθέτει hybrid BM25 + vector search και
+                βελτιωμένο memory layer.
               </Typography>
 
               <Link
@@ -150,10 +158,9 @@ export default function ProjectsPage() {
         {/* TEXT */}
         <Grid size={{ xs: 12, sm: 6 }}>
           <Typography sx={{ color: "#ccc" }}>
-            Proof-of-concept “chat with a document”. Μπορεί να επεκταθεί
-            σε εταιρικά manuals, policy documents, knowledge bases κ.λπ.,
-            ώστε ένας AI agent να απαντά με βάση τα πραγματικά έγγραφα
-            της επιχείρησης.
+            Proof-of-concept “chat with a document”. Μπορεί να επεκταθεί σε
+            εταιρικά manuals, policy documents, knowledge bases κ.λπ., ώστε ένας
+            AI agent να απαντά με βάση τα πραγματικά έγγραφα της επιχείρησης.
           </Typography>
         </Grid>
       </Grid>

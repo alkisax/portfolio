@@ -21,7 +21,8 @@ export default function ServicesPage() {
         >
           Από websites και e-shops μέχρι custom web εφαρμογές και λύσεις
           τεχνητής νοημοσύνης. Σχεδιάζω και υλοποιώ λύσεις που ταιριάζουν
-          πραγματικά στις ανάγκες μιας μικρής επιχείρησης.
+          πραγματικά στις ανάγκες μιας επιχείρησης ή ενός ατόμου που να
+          ενισχύουν την ψηφιακή παρουσία κάθε πελάτη.
         </Typography>
       </Box>
 
@@ -53,23 +54,21 @@ export default function ServicesPage() {
           <Card sx={{ height: "100%", backgroundColor: "#e3f2fd" }}>
             <CardContent sx={{ color: "grey.900" }}>
               <Typography variant="h6" fontWeight="bold" gutterBottom>
-                Τι Περιλαμβάνει
+                Custom E-Shop
               </Typography>
 
               <Typography sx={{ color: "grey.900", mb: 2 }}>
-                E-shop με React, Next.js, Node.js, Stripe, Appwrite και MongoDB.
-                Πλήρης ιδιοκτησία κώδικα, άριστη ταχύτητα, δυνατότητα επέκτασης
-                και υποστήριξη conversion-focused UI/UX.
+                Μοντέρνο, γρήγορο e-shop με σύγχρονο design, εύκολη διαχείριση
+                προϊόντων και άριστη εμπειρία χρήστη. Φτιαγμένο ώστε να
+                προσαρμόζεται στις ανάγκες της δικής σας επιχείρησης.
               </Typography>
 
               <ul style={{ paddingLeft: 20, margin: 0, color: "inherit" }}>
-                <li>React / Next.js Frontend</li>
-                <li>Node.js / MongoDB Backend</li>
-                <li>Stripe & Google Pay πληρωμές</li>
-                <li>Semantic search & AI χαρακτηριστικά</li>
-                <li>Εύκολη μετατροπή σε Android App</li>
-                <li>Appwrite storage για εικόνες</li>
-                <li>GA4 + Looker Analytics</li>
+                <li>Γρήγορο & ασφαλές</li>
+                <li>Μοντέρνο responsive design</li>
+                <li>Εύκολη διαχείριση προϊόντων</li>
+                <li>Δυνατότητα online πληρωμών</li>
+                <li>Εξαιρετική απόδοση & SEO</li>
               </ul>
 
               <Box mt={3}>
@@ -199,7 +198,6 @@ export default function ServicesPage() {
                 <li>Role-based authentication</li>
                 <li>Dashboards & αναφορές</li>
                 <li>File uploads & διαχείριση εγγράφων</li>
-                <li>Real-time events</li>
                 <li>Offline-first δυνατότητες</li>
                 <li>Mobile app με React Native</li>
               </ul>

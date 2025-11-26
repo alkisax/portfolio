@@ -46,7 +46,7 @@ export default function ContactPage() {
 
               <Typography sx={{ mb: 1 }}>
                 📱 Τηλέφωνο:{" "}
-                <span style={{ color: "#4fc3f7" }}>+30 6947-733075</span>
+                <span style={{ color: "#4fc3f7" }}>6947733075</span>
               </Typography>
 
               <Typography sx={{ mb: 1 }}>
