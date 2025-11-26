@@ -87,98 +87,83 @@ const EshopExamplePage = () => {
         </Button>
 
         <Collapse in={showImages}>
-          <Grid container spacing={2}>
-            {/* Desktop Home */}
-            <Grid size={{ xs: 12, md: 6 }}>
-              <Box
-                sx={{
-                  position: "relative",
-                  width: "100%",
-                  borderRadius: 2,
-                  overflow: "hidden",
-                  boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
-                }}
-              >
-                <Image
-                  src="/eshop/home-desktop.jpg"
-                  alt="Eshop Home Desktop"
-                  width={1200}
-                  height={800}
-                  style={{ width: "100%", height: "auto" }}
-                  priority={false}
-                  unoptimized
-                />
-              </Box>
-            </Grid>
+          <Grid container spacing={2} mt="20px">
+            {[
+              {
+                src: "/eshop-screenshots/home.png",
+                alt: "Home",
+                label: "Αρχική σελίδα",
+              },
+              {
+                src: "/eshop-screenshots/shop.png",
+                alt: "Shop",
+                label: "Σελίδα καταστήματος",
+              },
+              {
+                src: "/eshop-screenshots/itempage.png",
+                alt: "Item Page",
+                label: "Σελίδα προϊόντος",
+              },
+              {
+                src: "/eshop-screenshots/dashboard.png",
+                alt: "Dashboard",
+                label: "Dashboard διαχείρισης",
+              },
+              {
+                src: "/eshop-screenshots/login.png",
+                alt: "Login",
+                label: "Σελίδα εισόδου",
+              },
+              {
+                src: "/eshop-screenshots/native-app.jpeg",
+                alt: "Native",
+                label: "Mobile έκδοση",
+              },
+            ].map((img, i) => (
+              <Grid key={i} size={{ xs: 12, sm: 6, md: 4 }}>
+                <Box
+                  sx={{
+                    borderRadius: 2,
+                    overflow: "hidden",
+                    boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
+                    backgroundColor: "#fafafa",
+                  }}
+                >
+                  {/* Image Wrapper with fixed height */}
+                  <Box
+                    sx={{
+                      width: "100%",
+                      height: 230, // <-- ΣΤΑΘΕΡΟ FRAME ΓΙΑ ΟΛΕΣ ΤΙΣ ΕΙΚΟΝΕΣ
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      backgroundColor: "#fff",
+                      overflow: "hidden",
+                    }}
+                  >
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      width={500}
+                      height={500}
+                      style={{
+                        maxWidth: "100%",
+                        maxHeight: "100%",
+                        objectFit: "contain", // <-- Η ΜΑΓΙΚΗ ΛΥΣΗ
+                      }}
+                      unoptimized
+                    />
+                  </Box>
 
-            {/* Desktop Product */}
-            <Grid size={{ xs: 12, md: 6 }}>
-              <Box
-                sx={{
-                  position: "relative",
-                  width: "100%",
-                  borderRadius: 2,
-                  overflow: "hidden",
-                  boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
-                }}
-              >
-                <Image
-                  src="/eshop/product-desktop.jpg"
-                  alt="Eshop Product Desktop"
-                  width={1200}
-                  height={800}
-                  style={{ width: "100%", height: "auto" }}
-                  priority={false}
-                  unoptimized
-                />
-              </Box>
-            </Grid>
-
-            {/* Mobile Home */}
-            <Grid size={{ xs: 12, md: 6 }}>
-              <Box
-                sx={{
-                  position: "relative",
-                  width: "100%",
-                  borderRadius: 2,
-                  overflow: "hidden",
-                  boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
-                }}
-              >
-                <Image
-                  src="/eshop/home-mobile.jpg"
-                  alt="Eshop Mobile Home"
-                  width={600}
-                  height={1300}
-                  style={{ width: "100%", height: "auto" }}
-                  priority={false}
-                  unoptimized
-                />
-              </Box>
-            </Grid>
-
-            {/* Mobile Product */}
-            <Grid size={{ xs: 12, md: 6 }}>
-              <Box
-                sx={{
-                  position: "relative",
-                  width: "100%",
-                  borderRadius: 2,
-                  overflow: "hidden",
-                  boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
-                }}
-              >
-                <Image
-                  src="/eshop/product-mobile.jpg"
-                  alt="Eshop Mobile Product"
-                  width={600}
-                  height={1300}
-                  style={{ width: "100%", height: "auto" }}
-                  priority={false}
-                  unoptimized
-                />
-              </Box>
-            </Grid>
+                  {/* Caption */}
+                  <Box sx={{ p: 1.5, textAlign: "center" }}>
+                    <Typography variant="body2" color="text.secondary">
+                      {img.label}
+                    </Typography>
+                  </Box>
+                </Box>
+              </Grid>
+            ))}
           </Grid>
         </Collapse>
       </Box>
