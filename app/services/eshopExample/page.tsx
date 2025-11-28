@@ -1,3 +1,4 @@
+// portfolio-page\app\services\eshopExample\page.tsx
 "use client";
 
 import {
@@ -12,49 +13,29 @@ import {
   Button,
 } from "@mui/material";
 import { useState } from "react";
-import Image from "next/image";
+import IntroBlock from "@/components/common/IntroBlock";
+import CollapsibleImageGallery from "@/components/common/CollapsibleImageGallery";
+import FeatureListCard from "@/components/common/FeatureListCard";
+import ExternalLinkButton from "@/components/common/ExternalLinkButton";
 
 const EshopExamplePage = () => {
   const [openTech, setOpenTech] = useState(false);
-  const [showImages, setShowImages] = useState(false);
 
   return (
     <Container maxWidth="lg" sx={{ mt: 10, mb: 10 }}>
       {/* TITLE */}
-      <Typography variant="h3" fontWeight="bold" gutterBottom>
-        Παράδειγμα Custom E-Shop: “Έχω Μια Ιδέα”
-      </Typography>
+      <IntroBlock
+        title="Παράδειγμα Custom E-Shop: “Έχω Μια Ιδέα”"
+        text="Το συγκεκριμένο e-shop είναι πλήρως κατασκευασμένο με custom κώδικα,
+  κάτι που σημαίνει ότι προσαρμόζεται 100% στις ανάγκες κάθε επιχείρησης.
+  Δεν βασίζεται σε έτοιμα templates και δεν έχει περιορισμούς, δίνοντας
+  απόλυτη ελευθερία σε design, λειτουργίες και επέκταση στο μέλλον."
+      />
 
-      <Typography sx={{ color: "text.secondary", maxWidth: "800px", mb: 4 }}>
-        Το συγκεκριμένο e-shop είναι πλήρως κατασκευασμένο με custom κώδικα,
-        κάτι που σημαίνει ότι προσαρμόζεται 100% στις ανάγκες κάθε επιχείρησης.
-        Δεν βασίζεται σε έτοιμα templates και δεν έχει περιορισμούς, δίνοντας
-        απόλυτη ελευθερία σε design, λειτουργίες και επέκταση στο μέλλον.
-      </Typography>
-
-      <Box textAlign="center" mt={6}>
-        <a
-          href="https://eshop.portfolio-projects.space"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ textDecoration: "none" }}
-        >
-          <Box
-            sx={{
-              display: "inline-block",
-              px: 3,
-              py: 1.5,
-              backgroundColor: "#1976d2",
-              color: "white",
-              fontWeight: "bold",
-              borderRadius: "10px",
-              "&:hover": { backgroundColor: "#1565c0" },
-            }}
-          >
-            Δείτε το Live Demo
-          </Box>
-        </a>
-      </Box>
+      <ExternalLinkButton
+        href="https://eshop.portfolio-projects.space"
+        label="Δείτε το Live Demo"
+      />
 
       <Divider sx={{ my: 4 }} />
 
@@ -69,103 +50,41 @@ const EshopExamplePage = () => {
           “Έχω Μια Ιδέα”, τόσο σε desktop όσο και σε mobile προβολές.
         </Typography>
 
-        <Button
-          variant="outlined"
-          size="small"
-          onClick={() => setShowImages(!showImages)}
-          sx={{
-            textTransform: "none",
-            borderColor: "#1976d2",
-            color: "#1976d2",
-            "&:hover": {
-              borderColor: "#1565c0",
-              backgroundColor: "rgba(21,101,192,0.07)",
+        <CollapsibleImageGallery
+          buttonLabel="Δείτε εικόνες του καταστήματος"
+          images={[
+            {
+              src: "/eshop-screenshots/home.png",
+              alt: "Home",
+              label: "Αρχική σελίδα",
             },
-          }}
-        >
-          {showImages ? "Κλείσιμο εικόνων" : "Δείτε εικόνες του καταστήματος"}
-        </Button>
-
-        <Collapse in={showImages}>
-          <Grid container spacing={2} mt="20px">
-            {[
-              {
-                src: "/eshop-screenshots/home.png",
-                alt: "Home",
-                label: "Αρχική σελίδα",
-              },
-              {
-                src: "/eshop-screenshots/shop.png",
-                alt: "Shop",
-                label: "Σελίδα καταστήματος",
-              },
-              {
-                src: "/eshop-screenshots/itempage.png",
-                alt: "Item Page",
-                label: "Σελίδα προϊόντος",
-              },
-              {
-                src: "/eshop-screenshots/dashboard.png",
-                alt: "Dashboard",
-                label: "Dashboard διαχείρισης",
-              },
-              {
-                src: "/eshop-screenshots/login.png",
-                alt: "Login",
-                label: "Σελίδα εισόδου",
-              },
-              {
-                src: "/eshop-screenshots/native-app.jpeg",
-                alt: "Native",
-                label: "Mobile έκδοση",
-              },
-            ].map((img, i) => (
-              <Grid key={i} size={{ xs: 12, sm: 6, md: 4 }}>
-                <Box
-                  sx={{
-                    borderRadius: 2,
-                    overflow: "hidden",
-                    boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
-                    backgroundColor: "#fafafa",
-                  }}
-                >
-                  {/* Image Wrapper with fixed height */}
-                  <Box
-                    sx={{
-                      width: "100%",
-                      height: 230, // <-- ΣΤΑΘΕΡΟ FRAME ΓΙΑ ΟΛΕΣ ΤΙΣ ΕΙΚΟΝΕΣ
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      backgroundColor: "#fff",
-                      overflow: "hidden",
-                    }}
-                  >
-                    <Image
-                      src={img.src}
-                      alt={img.alt}
-                      width={500}
-                      height={500}
-                      style={{
-                        maxWidth: "100%",
-                        maxHeight: "100%",
-                        objectFit: "contain", // <-- Η ΜΑΓΙΚΗ ΛΥΣΗ
-                      }}
-                      unoptimized
-                    />
-                  </Box>
-
-                  {/* Caption */}
-                  <Box sx={{ p: 1.5, textAlign: "center" }}>
-                    <Typography variant="body2" color="text.secondary">
-                      {img.label}
-                    </Typography>
-                  </Box>
-                </Box>
-              </Grid>
-            ))}
-          </Grid>
-        </Collapse>
+            {
+              src: "/eshop-screenshots/shop.png",
+              alt: "Shop",
+              label: "Σελίδα καταστήματος",
+            },
+            {
+              src: "/eshop-screenshots/itempage.png",
+              alt: "Item Page",
+              label: "Σελίδα προϊόντος",
+            },
+            {
+              src: "/eshop-screenshots/dashboard.png",
+              alt: "Dashboard",
+              label: "Dashboard διαχείρισης",
+            },
+            {
+              src: "/eshop-screenshots/login.png",
+              alt: "Login",
+              label: "Σελίδα εισόδου",
+            },
+            {
+              src: "/eshop-screenshots/native-app.jpeg",
+              alt: "Native",
+              label: "Mobile έκδοση",
+            },
+          ]}
+        />
       </Box>
 
       {/* SECTION 1 — USER EXPERIENCE */}
@@ -186,45 +105,35 @@ const EshopExamplePage = () => {
         </Typography>
 
         <Grid container spacing={4}>
-          {/* CARD 1 — Λειτουργίες για Πελάτες */}
           <Grid size={{ xs: 12, md: 6 }}>
-            <Card sx={{ height: "100%", backgroundColor: "#e3f2fd" }}>
-              <CardContent sx={{ color: "grey.900" }}>
-                <Typography variant="h6" fontWeight="bold" gutterBottom>
-                  Λειτουργίες για Πελάτες
-                </Typography>
-
-                <ul style={{ paddingLeft: 20, color: "inherit" }}>
-                  <li>Έξυπνη αναζήτηση προϊόντων (απλή & semantic)</li>
-                  <li>Περιήγηση ανά κατηγορία</li>
-                  <li>Λειτουργία ως επισκέπτης ή με λογαριασμό</li>
-                  <li>Wishlist για εγγεγραμμένους χρήστες</li>
-                  <li>Σχόλια & αξιολογήσεις κάτω από προϊόντα</li>
-                  <li>Αγορές με κάρτα & Google Pay μέσω Stripe</li>
-                  <li>Πλήρως responsive σχεδιασμός για κινητά</li>
-                </ul>
-              </CardContent>
-            </Card>
+            <FeatureListCard
+              title="Λειτουργίες για Πελάτες"
+              bg="#e3f2fd"
+              bullets={[
+                "Έξυπνη αναζήτηση προϊόντων (απλή & semantic)",
+                "Περιήγηση ανά κατηγορία",
+                "Λειτουργία ως επισκέπτης ή με λογαριασμό",
+                "Wishlist για εγγεγραμμένους χρήστες",
+                "Σχόλια & αξιολογήσεις κάτω από προϊόντα",
+                "Αγορές με κάρτα & Google Pay μέσω Stripe",
+                "Πλήρως responsive σχεδιασμός για κινητά",
+              ]}
+            />
           </Grid>
 
-          {/* CARD 2 — Dashboard Διαχείρισης */}
           <Grid size={{ xs: 12, md: 6 }}>
-            <Card sx={{ height: "100%", backgroundColor: "#f1f8e9" }}>
-              <CardContent sx={{ color: "grey.900" }}>
-                <Typography variant="h6" fontWeight="bold" gutterBottom>
-                  Dashboard Διαχείρισης
-                </Typography>
-
-                <ul style={{ paddingLeft: 20, color: "inherit" }}>
-                  <li>Διαχείριση πελατών & παραγγελιών</li>
-                  <li>Αυτόματα email ενημέρωσης</li>
-                  <li>Εισαγωγή / επεξεργασία / διαγραφή προϊόντων</li>
-                  <li>Έλεγχος στοκ & τιμών</li>
-                  <li>Upload εικόνων προϊόντων</li>
-                  <li>Δημιουργία και δημοσίευση ανακοινώσεων (blog posts)</li>
-                </ul>
-              </CardContent>
-            </Card>
+            <FeatureListCard
+              title="Dashboard Διαχείρισης"
+              bg="#f1f8e9"
+              bullets={[
+                "Διαχείριση πελατών & παραγγελιών",
+                "Αυτόματα email ενημέρωσης",
+                "Εισαγωγή / επεξεργασία / διαγραφή προϊόντων",
+                "Έλεγχος στοκ & τιμών",
+                "Upload εικόνων προϊόντων",
+                "Δημιουργία και δημοσίευση ανακοινώσεων (blog posts)",
+              ]}
+            />
           </Grid>
         </Grid>
       </Box>
@@ -234,12 +143,12 @@ const EshopExamplePage = () => {
       {/* -------- SECTION 2 — TECH DETAILS (COLLAPSABLE) -------- */}
       <Box mb={6}>
         <Typography variant="h4" fontWeight="bold" gutterBottom>
-          Τεχνικά Χαρακτηριστικά (Προαιρετικά)
+          Τεχνικά Χαρακτηριστικά
         </Typography>
 
         {/* Κάρτα με το κουμπί */}
         <Card sx={{ backgroundColor: "grey.900", mb: 3 }}>
-          <CardContent sx={{ color: "grey.900" }}>
+          <CardContent sx={{ color: "text.secondary" }}>
             <Typography variant="h6" fontWeight="bold" gutterBottom>
               Πληροφορίες υλοποίησης
             </Typography>
@@ -271,89 +180,58 @@ const EshopExamplePage = () => {
         {/* COLLAPSE CONTENT */}
         <Collapse in={openTech}>
           <Grid container spacing={4}>
-            {/* FRONTEND CARD */}
             <Grid size={{ xs: 12, md: 6 }}>
-              <Card sx={{ height: "100%", backgroundColor: "#fff8e1" }}>
-                <CardContent sx={{ color: "grey.900" }}>
-                  <Typography variant="h6" fontWeight="bold" gutterBottom>
-                    Frontend
-                  </Typography>
-                  <ul style={{ paddingLeft: 20, color: "inherit" }}>
-                    <li>React 19</li>
-                    <li>MUI UI</li>
-                    <li>Skeleton loaders & Suspense</li>
-                    <li>SEO με react-helmet-async</li>
-                    <li>Editor.js για rich content</li>
-                    <li>Pagination, filters, search</li>
-                  </ul>
-                </CardContent>
-              </Card>
+              <FeatureListCard
+                title="Frontend"
+                bg="#fff8e1"
+                bullets={[
+                  "React 19",
+                  "MUI UI",
+                  "Skeleton loaders & Suspense",
+                  "SEO με react-helmet-async",
+                  "Editor.js για rich content",
+                  "Pagination, filters, search",
+                ]}
+              />
             </Grid>
 
-            {/* BACKEND CARD */}
             <Grid size={{ xs: 12, md: 6 }}>
-              <Card sx={{ height: "100%", backgroundColor: "#e8f5e9" }}>
-                <CardContent sx={{ color: "grey.900" }}>
-                  <Typography variant="h6" fontWeight="bold" gutterBottom>
-                    Backend
-                  </Typography>
-                  <ul style={{ paddingLeft: 20, color: "inherit" }}>
-                    <li>Node.js + Express</li>
-                    <li>MongoDB + Mongoose</li>
-                    <li>JWT Authentication</li>
-                    <li>Zod validation</li>
-                    <li>Helmet, CORS, Rate Limiter, DOMPurifier</li>
-                    <li>Nodemailer automated emails</li>
-                    <li>Swagger API Docs</li>
-                  </ul>
-                </CardContent>
-              </Card>
+              <FeatureListCard
+                title="Backend"
+                bg="#e8f5e9"
+                bullets={[
+                  "Node.js + Express",
+                  "MongoDB + Mongoose",
+                  "JWT Authentication",
+                  "Zod validation",
+                  "Helmet, CORS, Rate Limiter, DOMPurifier",
+                  "Nodemailer automated emails",
+                  "Swagger API Docs",
+                ]}
+              />
             </Grid>
 
-            {/* TESTING + DEPLOYMENT */}
             <Grid size={{ xs: 12 }}>
-              <Card sx={{ backgroundColor: "#f3e5f5" }}>
-                <CardContent sx={{ color: "grey.900" }}>
-                  <Typography variant="h6" fontWeight="bold" gutterBottom>
-                    Testing, SEO & Deployment
-                  </Typography>
-                  <ul style={{ paddingLeft: 20, color: "inherit" }}>
-                    <li>Jest backend tests</li>
-                    <li>Cypress end-to-end testing</li>
-                    <li>GDPR συμμόρφωση</li>
-                    <li>SEO-optimized με Helmet metadata</li>
-                    <li>Deployment σε Hetzner</li>
-                  </ul>
-                </CardContent>
-              </Card>
+              <FeatureListCard
+                title="Testing, SEO & Deployment"
+                bg="#f3e5f5"
+                bullets={[
+                  "Jest backend tests",
+                  "Cypress end-to-end testing",
+                  "GDPR συμμόρφωση",
+                  "SEO-optimized με Helmet metadata",
+                  "Deployment σε Hetzner",
+                ]}
+              />
             </Grid>
           </Grid>
         </Collapse>
       </Box>
 
-      <Box textAlign="center" mt={6}>
-        <a
-          href="https://eshop.portfolio-projects.space"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ textDecoration: "none" }}
-        >
-          <Box
-            sx={{
-              display: "inline-block",
-              px: 3,
-              py: 1.5,
-              backgroundColor: "#1976d2",
-              color: "white",
-              fontWeight: "bold",
-              borderRadius: "10px",
-              "&:hover": { backgroundColor: "#1565c0" },
-            }}
-          >
-            Δείτε το Live Demo
-          </Box>
-        </a>
-      </Box>
+      <ExternalLinkButton
+        href="https://eshop.portfolio-projects.space"
+        label="Δείτε το Live Demo"
+      />
     </Container>
   );
 };
