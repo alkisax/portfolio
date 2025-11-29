@@ -40,22 +40,52 @@ export default function CustomAppsPage() {
 
       <Typography sx={{ color: "text.secondary", mb: 3, maxWidth: "800px" }}>
         Το Shared Fees Project είναι μια εφαρμογή διαχείρισης κοινοχρήστων για
-        πολυκατοικίες. Οι διαχειριστές ανεβάζουν Excel και η εφαρμογή δημιουργεί
-        αυτόματα λογαριασμούς, αποστέλλει email, επιτρέπει ανέβασμα αποδείξεων
-        και λειτουργεί σε web & Android.
+        πολυκατοικίες. Οι διαχειριστές ανεβάζουν ένα αρχείο Excel με τα έξοδα
+        της πολυκατοικίας και η εφαρμογή δημιουργεί αυτόματα προσωπικούς
+        λογαριασμούς ανά διαμέρισμα, αποστέλλει email, επιτρέπει ανέβασμα
+        αποδείξεων και προβάλει το ιστορικό των πληρωμών. Λειτουργεί σε web &
+        Android.
       </Typography>
 
       {/* ----- IMAGES GALLERY REUSABLE ----- */}
       <CollapsibleImageGallery
         buttonLabel="Εικόνες εφαρμογής"
         images={[
-          { src: "/custom-apps/shared/home.png", alt: "Home", label: "Αρχική σελίδα" },
-          { src: "/custom-apps/shared/dashboard1.png", alt: "Dash1", label: "Dashboard 1" },
-          { src: "/custom-apps/shared/dashboard2.png", alt: "Dash2", label: "Dashboard 2" },
-          { src: "/custom-apps/shared/dashboard3.png", alt: "Dash3", label: "Dashboard 3" },
-          { src: "/custom-apps/shared/dashboard4.png", alt: "Dash4", label: "Dashboard 4" },
-          { src: "/custom-apps/shared/userview.png", alt: "User view", label: "User view" },
-          { src: "/custom-apps/shared/native-app.jpeg", alt: "Android", label: "Android App" },
+          {
+            src: "/custom-apps/shared/home.png",
+            alt: "Home",
+            label: "Αρχική σελίδα",
+          },
+          {
+            src: "/custom-apps/shared/dashboard1.png",
+            alt: "Dash1",
+            label: "Dashboard 1",
+          },
+          {
+            src: "/custom-apps/shared/dashboard2.png",
+            alt: "Dash2",
+            label: "Dashboard 2",
+          },
+          {
+            src: "/custom-apps/shared/dashboard3.png",
+            alt: "Dash3",
+            label: "Dashboard 3",
+          },
+          {
+            src: "/custom-apps/shared/dashboard4.png",
+            alt: "Dash4",
+            label: "Dashboard 4",
+          },
+          {
+            src: "/custom-apps/shared/userview.png",
+            alt: "User view",
+            label: "User view",
+          },
+          {
+            src: "/custom-apps/shared/native-app.jpeg",
+            alt: "Android",
+            label: "Android App",
+          },
         ]}
       />
 
@@ -140,8 +170,8 @@ export default function CustomAppsPage() {
       </Typography>
 
       <Typography sx={{ color: "text.secondary", mb: 3, maxWidth: "800px" }}>
-        Σύστημα που επιτρέπει συνομιλία με το περιεχόμενο ενός βιβλίου μέσω
-        embeddings, vector search και context windows.
+        Σύστημα που επιτρέπει συνομιλία με το περιεχόμενο ενός βιβλίου μέσω embeddings, vector search και context windows. Η εφαρμογή «καταλαβαίνει» το κείμενο του βιβλίου και μπορεί να εντοπίζει τα πιο σχετικά σημεία κάθε φορά που γίνεται μια ερώτηση. Σε αντίθεση με ένα κλασικό chatbot που απαντά γενικά, εδώ οι απαντήσεις βασίζονται αποκλειστικά στο πραγματικό περιεχόμενο του βιβλίου. Έτσι, ο χρήστης μπορεί να ζητήσει βοήθεια για έννοιες, κεφάλαια ή ιδέες, και να λάβει: ξεκάθαρη εξήγηση, βασισμένη στο κείμενο του συγγραφέα, μαζί με το αντίστοιχο απόσπασμα. Η τεχνολογία αυτή χρησιμοποιείται σε εκπαιδευτικά εργαλεία, έρευνα,
+        manuals και εταιρικά έγγραφα, όπου απαιτείται ακριβής και αξιόπιστη πληροφόρηση χωρίς να χρειάζεται να διαβάσει ο χρήστης ολόκληρο το υλικό. Με απλά λόγια: ένα σύστημα που επιτρέπει στο AI να απαντά με βάση το πραγματικό περιεχόμενο ενός συγκεκριμένου βιβλίου ή εγγράφου.
       </Typography>
 
       {/* ----- RAG IMAGES GALLERY ----- */}
@@ -149,7 +179,11 @@ export default function CustomAppsPage() {
         buttonLabel="Εικόνες RAG συστήματος"
         images={[
           { src: "/custom-apps/rag/home1.png", alt: "Home", label: "Αρχική" },
-          { src: "/custom-apps/rag/query-context.png", alt: "QC", label: "Query + Context" },
+          {
+            src: "/custom-apps/rag/query-context.png",
+            alt: "QC",
+            label: "Query + Context",
+          },
         ]}
       />
 

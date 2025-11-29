@@ -10,7 +10,12 @@ export default function ServicesPage() {
   return (
     <Container maxWidth="lg" sx={{ mt: 10, mb: 10 }}>
       {/* MAIN HEADER */}
-      <IntroBlock title={"Υπηρεσίες"} text={"Από websites και e-shops μέχρι custom web εφαρμογές και λύσεις τεχνητής νοημοσύνης. Σχεδιάζω και υλοποιώ λύσεις που  ταιριάζουν πραγματικά στις ανάγκες μιας επιχείρησης ή ενός ατόμου."} />
+      <IntroBlock
+        title={"Υπηρεσίες"}
+        text={
+          "Κατασκευή websites, e-shops, custom web εφαρμογές και λύσεις τεχνητής νοημοσύνης. Σχεδιάζω και υλοποιώ λύσεις που  ταιριάζουν πραγματικά στις ανάγκες μιας επιχείρησης ή ενός μεμονομένου πελάτη."
+        }
+      />
 
       {/* GRID WRAPPER */}
       <Grid container spacing={4}>
@@ -34,7 +39,7 @@ export default function ServicesPage() {
           href="/services/eshopExample"
           bg="#e3f2fd"
           buttonColor="#1976d2"
-          badge="/badges/eshop-transp.png" 
+          badge="/badges/eshop-transp.png"
         />
 
         {/* ----------------------------- */}
@@ -63,16 +68,15 @@ export default function ServicesPage() {
         {/* ----------------------------- */}
         <ServicesSectionBlock
           sectionTitle="Custom Web Applications"
-          sectionDescription="Για επιχειρήσεις που χρειάζονται εξειδικευμένες λύσεις όπως dashboards, automations, workflows,
-          CRM συστήματα ή εσωτερικά εργαλεία."
+          sectionDescription="Πλήρως custom λύσεις προσαρμοσμένες στις ανάγκες της εκάστοτε επιχείρησης — από booking συστήματα και online πληρωμές μέχρι admin dashboards, workflows και οτιδήποτε μοναδικό απαιτεί το project. Όπως και mobile εφαρμογές (Android) που λειτουργούν ως επέκταση του συστήματος. "
           cardTitle="Custom Web App"
-          cardDescription="Δυνατότητες για multi-tenant συστήματα, automations, dashboards, file uploads και mobile app."
+          cardDescription="Δυνατότητες για automations, dashboards, file uploads και mobile app."
           bullets={[
-            "Role-based authentication",
-            "Dashboards & αναφορές",
+            "Custom λειτουργίες (booking, πληρωμές, workflows)",
+            "Dashboards & εργαλεία διαχείρισης",
             "File uploads & document management",
-            "Offline-first δυνατότητες",
-            "Mobile app με React Native",
+            "Role-based πρόσβαση & ασφάλεια",
+            "Mobile app έκδοση με React Native και expo",
           ]}
           href="/services/customApps"
           bg="#fff3e0"

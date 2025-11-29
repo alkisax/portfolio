@@ -51,7 +51,7 @@ export default function AboutPage() {
               bg="#222"
               textColor="text.primary"
               bullets={[
-                "Custom React / Next.js e-shops",
+                "Custom με React / Next.js",
                 "WordPress + WooCommerce",
                 "Branding & UI/UX (με designer)",
               ]}
@@ -64,9 +64,9 @@ export default function AboutPage() {
               bg="#222"
               textColor="text.primary"
               bullets={[
-                "Role-based συστήματα",
-                "Dashboards / management εργαλεία",
-                "File uploads, reports, automations",
+                // "Role-based συστήματα",
+                // "Dashboards / management εργαλεία",
+                // "File uploads, reports, automations",
               ]}
             />
           </Grid>
@@ -78,7 +78,7 @@ export default function AboutPage() {
               textColor="text.primary"
               bullets={[
                 "React Native (Expo)",
-                "Camera, uploads, push notifications",
+                "Camera, uploads",
                 "Integration με backend",
               ]}
             />
@@ -109,6 +109,7 @@ export default function AboutPage() {
         σε ομάδα που χρησιμοποιεί React, Next.js, Node.js, TypeScript ή MERN.`}
       >
         <ul style={{ color: "text.primary", paddingLeft: 40, marginTop: 10 }}>
+          Θα ήθελα:
           <li>να συμμετέχω σε παραγωγικά projects,</li>
           <li>να εξελίξω τις γνώσεις μου σε backend & DevOps,</li>
           <li>να δουλέψω σε structured workflow (GitHub, CI/CD, SCRUM),</li>

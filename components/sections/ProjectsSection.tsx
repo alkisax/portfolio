@@ -13,8 +13,8 @@ export default function ProjectsSection() {
       <IntroBlock
         title="Projects"
         text="Χτίζω full-stack εφαρμογές με React, Next.js, Node.js, MongoDB, React Native, MUI,
-        αλλά και CMS WordPress για φθηνότερες και ταχύτερες λύσεις και εφαρμογές RAG AI.
-        Παρακάτω παρουσιάζονται μερικά από τα έργα."
+        αλλά και CMS WordPress για φθηνότερες και ταχύτερες λύσεις και custom εφαρμογές οπως και RAG AI.
+        Παρακάτω παρουσιάζονται μερικά από τα έργα που έχω δουλέψει."
       />
 
       {/* ===================================================== */}
@@ -30,14 +30,16 @@ export default function ProjectsSection() {
             SEO, Semantic Search tests και deployment σε Hetzner."
             href="/services/eshopExample"
             bg="#e3f2fd"
+            badge="/badges/eshop-transp.png"
           />
         </Grid>
 
         {/* TEXT RIGHT */}
         <Grid size={{ xs: 12, sm: 6 }}>
           <Typography sx={{ color: "#ccc" }}>
-            Πλήρες e-commerce σύστημα με custom UI/UX, backend σε Node.js / Express,
-            MongoDB, AI δυνατότητες και CMS-style διαχείριση. Σε παραγωγή για πραγματικό πελάτη.
+            Πλήρες e-commerce σύστημα με custom UI/UX, backend σε Node.js /
+            Express, MongoDB, AI δυνατότητες και CMS-style διαχείριση. Σε
+            λειτουργία για πραγματικό πελάτη.
           </Typography>
         </Grid>
       </Grid>
@@ -51,7 +53,8 @@ export default function ProjectsSection() {
           <Typography sx={{ color: "#ccc" }}>
             Custom web εφαρμογή για διαχείριση κοινοχρήστων με Excel import,
             αυτόματη δημιουργία λογαριασμών, emails, multi-building management,
-            uploads, approvals, dashboards & native mobile app. Σε λειτουργία για πραγματικό πελάτη.
+            uploads, approvals, dashboards & native mobile app. Σε λειτουργία
+            για πραγματικό πελάτη.
           </Typography>
         </Grid>
 
@@ -64,6 +67,7 @@ export default function ProjectsSection() {
             href="/services/customApps"
             bg="#fff3e0"
             btnColor="#ef6c00"
+            badge="/badges/building-transp.png"
           />
         </Grid>
       </Grid>
@@ -81,14 +85,16 @@ export default function ProjectsSection() {
             href="/services/customApps#rag-section"
             bg="#f3e5f5"
             btnColor="#9c27b0"
+            badge="/badges/robot-transp.png"
           />
         </Grid>
 
         {/* TEXT RIGHT */}
         <Grid size={{ xs: 12, sm: 6 }}>
           <Typography sx={{ color: "#ccc" }}>
-            Proof-of-concept RAG system για manuals, policy documents και
-            knowledge bases — ώστε ένας AI agent να απαντά με βάση πραγματικά έγγραφα εταιρείας.
+            Proof-of-concept RAG σύστημα που μετατρέπει manuals, policy
+            documents και εσωτερικά αρχεία μιας εταιρείας σε λειτουργική γνώση. Ο AI agent μπορεί να απαντά σε ερωτήσεις βασισμένος αποκλειστικά στο πραγματικό περιεχόμενο των εγγράφων, και να παρουσιάζει παραπομπές απο τα
+            σχετικά αποσπάσματα.
           </Typography>
         </Grid>
       </Grid>

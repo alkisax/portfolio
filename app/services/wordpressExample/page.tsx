@@ -9,7 +9,6 @@ import { Container, Box, Typography, Divider, Grid } from "@mui/material";
 export default function WordpressExamplePage() {
   return (
     <Container maxWidth="lg" sx={{ mt: 10, mb: 10 }}>
-      
       {/* TITLE */}
       <IntroBlock
         title="Παράδειγμα WordPress / WooCommerce Καταστήματος"
@@ -27,10 +26,12 @@ export default function WordpressExamplePage() {
         <Typography sx={{ color: "text.secondary", mb: 3 }}>
           Το WordPress e-shop επιτρέπει ταχύτατη υλοποίηση με απλή διαχείριση
           περιεχομένου και παραγγελιών — ιδανικό για μικρές επιχειρήσεις.
+          Παράλληλα, παραμένει ένα πλήρως λειτουργικό και οπτικά ελκυστικό
+          κατάστημα, με σύγχρονο design, εύκολη πλοήγηση και όλα τα απαραίτητα
+          εργαλεία για μια ολοκληρωμένη online παρουσία.
         </Typography>
 
         <Grid container spacing={4}>
-          
           {/* CUSTOMER FEATURES */}
           <Grid size={{ xs: 12, md: 6 }}>
             <FeatureListCard
@@ -64,7 +65,6 @@ export default function WordpressExamplePage() {
               ]}
             />
           </Grid>
-
         </Grid>
       </Box>
 
@@ -77,7 +77,8 @@ export default function WordpressExamplePage() {
         </Typography>
 
         <Typography sx={{ color: "text.secondary", mb: 3 }}>
-          Επιλέχθηκαν για ταχύτητα, συμβατότητα, επεκτασιμότητα και ευκολία χρήσης.
+          Επιλέχθηκαν για ταχύτητα, συμβατότητα, επεκτασιμότητα και ευκολία
+          χρήσης.
         </Typography>
 
         <FeatureListCard
@@ -112,7 +113,6 @@ export default function WordpressExamplePage() {
         </Typography>
 
         <Grid container spacing={4}>
-
           {/* PERFORMANCE */}
           <Grid size={{ xs: 12, md: 6 }}>
             <FeatureListCard
@@ -142,7 +142,6 @@ export default function WordpressExamplePage() {
               ]}
             />
           </Grid>
-
         </Grid>
       </Box>
 
