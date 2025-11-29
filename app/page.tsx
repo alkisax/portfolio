@@ -1,7 +1,6 @@
 // portfolio-page\app\page.tsx
 "use client";
 
-import Link from "next/link";
 import {
   Container,
 } from "@mui/material";

@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "./theme";
 import Navbar from "./components/Navbar";
+import { boldPixels } from "./fonts";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={boldPixels.variable}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

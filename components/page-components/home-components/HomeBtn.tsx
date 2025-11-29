@@ -2,7 +2,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import HomeBtnBadge from "./HomeBtnBadge";
 import { Grid, Card, CardActionArea, Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
