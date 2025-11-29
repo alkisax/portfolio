@@ -3,7 +3,7 @@
 
 import { Box, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
-import ServicesSectionCard from "./ServicesSectionCardProps";
+import ServicesSectionCard from "./ServicesSectionCard";
 
 interface Props {
   sectionTitle: string;
@@ -14,6 +14,7 @@ interface Props {
   href: string;
   bg: string;
   buttonColor: string;
+  badge?: string; 
 }
 
 export default function ServicesSectionBlock({
@@ -25,6 +26,7 @@ export default function ServicesSectionBlock({
   href,
   bg,
   buttonColor,
+  badge
 }: Props) {
   return (
     <>
@@ -50,6 +52,7 @@ export default function ServicesSectionBlock({
           href={href}
           bg={bg}
           buttonColor={buttonColor}
+          badge={badge}
         />
       </Grid>
     </>

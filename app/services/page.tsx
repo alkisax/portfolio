@@ -34,6 +34,7 @@ export default function ServicesPage() {
           href="/services/eshopExample"
           bg="#e3f2fd"
           buttonColor="#1976d2"
+          badge="/badges/eshop-transp.png" 
         />
 
         {/* ----------------------------- */}
@@ -54,6 +55,7 @@ export default function ServicesPage() {
           href="/services/wordpressExample"
           bg="#e8f5e9"
           buttonColor="#2e7d32"
+          badge="/badges/wordpress-transp.png"
         />
 
         {/* ----------------------------- */}
@@ -75,6 +77,7 @@ export default function ServicesPage() {
           href="/services/customApps"
           bg="#fff3e0"
           buttonColor="#ef6c00"
+          badge="/badges/customApp-transp.png"
         />
       </Grid>
     </Container>

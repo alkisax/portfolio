@@ -1,6 +1,7 @@
-// portfolio-page\components\page-components\services-components\ServicesSectionCardProps.tsx
+// portfolio-page\components\page-components\services-components\ServicesSectionCard.tsx
 import { Card, CardContent, Typography, Box } from "@mui/material";
 import Link from "next/link";
+import HomeBtnBadge from "../home-components/HomeBtnBadge"
 
 interface ServicesSectionCardProps {
   title: string;
@@ -9,6 +10,7 @@ interface ServicesSectionCardProps {
   href: string;
   bg: string;
   buttonColor: string;
+  badge?: string; // ⭐ NEW
 }
 
 export default function ServicesSectionCard({
@@ -18,9 +20,27 @@ export default function ServicesSectionCard({
   href,
   bg,
   buttonColor,
+  badge,
 }: ServicesSectionCardProps) {
   return (
-    <Card sx={{ height: "100%", backgroundColor: bg }}>
+    <Card
+      sx={{
+        height: "100%",
+        backgroundColor: bg,
+        position: "relative",    // ⭐ allow badge position
+        overflow: "visible",
+      }}
+    >
+      {/* ⭐ BADGE */}
+      {badge && (
+        <HomeBtnBadge
+          src={badge}
+          top={-60}
+          right={60}
+          size={140}
+        />
+      )}
+
       <CardContent sx={{ color: "grey.900" }}>
         <Typography variant="h6" fontWeight="bold" gutterBottom>
           {title}
