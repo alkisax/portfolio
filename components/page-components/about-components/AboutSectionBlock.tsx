@@ -14,14 +14,14 @@ export default function AboutSectionBlock({ title, text, children }: Props) {
         variant="h4"
         fontWeight="bold"
         gutterBottom
-        sx={{ color: "text.primary" }}   // ⭐ ΑΣΠΡΟ
+        sx={{ color: "text.primary" }}
       >
         {title}
       </Typography>
 
       <Typography
         sx={{
-          color: "text.secondary",  // ⭐ ΑΝΟΙΧΤΟ ΓΚΡΙ (#ccc)
+          color: "text.secondary",
           mb: 3,
           whiteSpace: "pre-line",
         }}
