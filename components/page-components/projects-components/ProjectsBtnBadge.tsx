@@ -12,7 +12,7 @@ interface HomeBtnBadgeProps {
 
 export default function HomeBtnBadge({
   src,
-  top = "-30%",   // only vertical offset
+  top = "70%",   // only vertical offset
   size = 120,
 }: HomeBtnBadgeProps) {
   return (
@@ -20,13 +20,13 @@ export default function HomeBtnBadge({
       sx={{
         position: "absolute",
         top,
-        left: "50%",                 // center
-        transform: "translateX(-50%)", // ALWAYS centered
+        left: "65%",
         width: size,
         height: size,
         zIndex: 10,
         borderRadius: "50%",
         overflow: "hidden",
+        mb: 10
       }}
     >
       <motion.div

@@ -1,7 +1,7 @@
 // portfolio-page\components\page-components\services-components\ServicesSectionCard.tsx
 import { Card, CardContent, Typography, Box } from "@mui/material";
 import Link from "next/link";
-import HomeBtnBadge from "../home-components/HomeBtnBadge"
+import ServicesBtnBadge from "./ServicesBtnBadge";
 
 interface ServicesSectionCardProps {
   title: string;
@@ -33,11 +33,8 @@ export default function ServicesSectionCard({
     >
       {/* ⭐ BADGE */}
       {badge && (
-        <HomeBtnBadge
+        <ServicesBtnBadge
           src={badge}
-          top={-60}
-          right={60}
-          size={140}
         />
       )}
 

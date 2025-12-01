@@ -2,7 +2,7 @@
 
 import { Card, CardContent, Typography, Button } from "@mui/material";
 import Link from "next/link";
-import HomeBtnBadge from "../../page-components/home-components/HomeBtnBadge"; // ⭐ reuse existing pixel badge
+import ProjectsBtnBadge from "./ProjectsBtnBadge"
 
 interface Props {
   title: string;
@@ -31,11 +31,8 @@ export default function ProjectCard({
     >
       {/* ⭐ BADGE */}
       {badge && (
-        <HomeBtnBadge
+        <ProjectsBtnBadge
           src={badge}
-          top={210}
-          right={-10}
-          size={130}
         />
       )}
 

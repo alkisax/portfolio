@@ -33,7 +33,12 @@ const HomeHeroImg = () => {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            fontSize: "5rem",
+            fontSize: {
+              xs: "2rem", // mobile
+              sm: "4rem",
+              md: "5rem",
+              lg: "5rem", // desktop
+            },
             fontWeight: "bold",
             color: "#00E5FF",
             fontFamily: "var(--font-boldpixels)",
@@ -50,7 +55,7 @@ const HomeHeroImg = () => {
             top: "70%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            fontSize: "2rem",
+            fontSize: {xs: "1.5rem", md: "2rem"},
             fontWeight: "bold",
             color: "#B388FF",
             fontFamily: "var(--font-boldpixels)",

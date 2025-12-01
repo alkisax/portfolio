@@ -18,8 +18,8 @@ export default function Home() {
       <Grid container spacing={4}>
         <HomeBtn title="Services" href="/services" bg="#e0f7fa" badge="/badges/servicesbtn-transp.png" />
         <HomeBtn title="Projects" href="/projects" bg="#f3e5f5" badge="/badges/projectsbtn-transp.png" />
-        <HomeBtn title="About Me" href="/about" bg="#fff9c4" badge="/badges/contactbtn-transp.png" />
-        <HomeBtn title="Contact" href="/contact" bg="#ffe0b2" badge="/badges/aboutbtn-transp.png" />
+        <HomeBtn title="About Me" href="/about" bg="#fff9c4" badge="/badges/aboutbtn-transp.png" />
+        <HomeBtn title="Contact" href="/contact" bg="#ffe0b2" badge="/badges/contactbtn-transp.png" />
       </Grid>
     </Container>
   );
