@@ -1,9 +1,9 @@
 "use client";
 
 import { Box } from "@mui/material";
-import ColorScrollBox from "@/components/media/ColorScrollBox";
 import EshopPresent from "@/components/page-components/eshop/EshopPresent";
 import { marBlue, marCoral, marGreen, marOchre, marOrangeRed, marPurple } from "@/constants/constants";
+import ColorScrollBox from "@/components/media/ColorScrollBox";
 
 const Page = () => {
   return (

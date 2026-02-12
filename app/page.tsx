@@ -11,32 +11,34 @@ import {
   marOrangeRed,
   marOchre,
 } from "@/constants/constants";
-import ColorScrollBox from "@/components/media/ColorScrollBox";
+import AlternativeColorScrollBox from "@/components/media/AlternativeColorScrollBox";
 
 const Page = () => {
   return (
-    <Box
-      sx={{
-        height: "100vh",
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
-      <Box sx={{ flex: 1, minHeight: 0 }}>
-        <ColorScrollBox
-          colors={[
-            marPurple,
-            marBlue,
-            marGreen,
-            marCoral,
-            marOrangeRed,
-            marOchre,
-          ]}
-        >
-          <HomePageBase />
-        </ColorScrollBox>
+    <>
+      <Box
+        sx={{
+          height: "100vh",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <Box sx={{ flex: 1, minHeight: 0 }}>
+          <AlternativeColorScrollBox
+            colors={[
+              marPurple,
+              marBlue,
+              marGreen,
+              marCoral,
+              marOrangeRed,
+              marOchre,
+            ]}
+          >
+            <HomePageBase />
+          </AlternativeColorScrollBox>
+        </Box>
       </Box>
-    </Box>
+    </>
   );
 };
 
