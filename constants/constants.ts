@@ -19,6 +19,12 @@ export const marGreen = "#34bf62";
 export const marCoral = "#ff9283";
 export const marOrangeRed = "#f75439";
 export const marOchre = "#bc9133";
+export const accentElectricCyan = "#00E5FF";  // electric accent / highlight
+export const accentLightViolet = "#B388FF";   // soft bright violet
+export const accentWarmHighlight = "#ffb300"; // warm highlight / badge
+export const accentCTAOrange = "#ef6c00";     // strong CTA orange
+export const accentLinkBlue = "#1976d2";      // clean link blue
+export const accentDarkGreen = "#2e7d32";     // solid dark green
 // Σημείωση για το shade + → φωτίζει, - → σκουραίνει
 export const primaryDarkenColor = shade(primaryBrightColor, -25);
 export const secondaryDarkenColor = shade(secondaryBrightColor, -25);

@@ -237,7 +237,7 @@ const ColorScrollBox = ({
           width: "100%",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
+          alignItems: "stretch",
           minHeight: "500%",
         }}
       >
